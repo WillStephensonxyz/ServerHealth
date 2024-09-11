@@ -1,6 +1,7 @@
 import psutil 
 import logging 
 
+logging.basicConfig(filename="hardware.log", level=logging.INFO, format="%(asctime)s: %(levelname)s: %(message)s") 
 
 def cpu_usage(): 
     cpu_usage = psutil.cpu_percent(interval=5) 
@@ -12,6 +13,11 @@ def cpu_usage():
     print(f"Number of logical threads: {cpu_cores_logical}") 
     print(f"Number of physical cores: {cpu_cores_physical}")
     print(f"CPU usage by core: {cpu_usage_per_core} \n")
+
+    logging.info(f"CPU total usage: %{cpu_usage}")
+    logging.info(f"Number of logical threads: {cpu_cores_logical}") 
+    logging.info(f"Number of physical cores: {cpu_cores_physical}")
+    logging.info(f"CPU usage by core: {cpu_usage_per_core}")
 
 def memory_usage(): 
     memory = psutil.virtual_memory()
@@ -25,6 +31,13 @@ def memory_usage():
     print(f"Used memory {used_memory:.2f} GB")
     print(f"Memory usage percent: %{memory_usage_percent} \n")
 
+    logging.info(f"Total memory: {total_memory:.2f} GB") 
+    logging.info(f"Available memory usage: {available_memory:.2f} GB ") 
+    logging.info(f"Used memory {used_memory:.2f} GB")
+    logging.info(f"Memory usage percent: %{memory_usage_percent}")
+
+
+
 def disk_usage(): 
     disk = psutil.disk_usage('/') 
     total_disk = disk.total / (1024 ** 3) 
@@ -37,6 +50,11 @@ def disk_usage():
     print(f"Free hard drive space: {free_disk:.2f} GB") 
     print(f"Hard drive usage: %{disk_usage_percent}")
 
+    logging.info(f"Total hard drive space: {total_disk:.2f} GB") 
+    logging.info(f"Hard drive space used: {used_disk:.2f} GB") 
+    logging.info(f"Free hard drive space: {free_disk:.2f} GB") 
+    logging.info(f"Hard drive usage: %{disk_usage_percent}")
+    
 def system_temperature(): 
     pass 
 
