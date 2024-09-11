@@ -36,8 +36,6 @@ def memory_usage():
     logging.info(f"Used memory {used_memory:.2f} GB")
     logging.info(f"Memory usage percent: %{memory_usage_percent}")
 
-
-
 def disk_usage(): 
     disk = psutil.disk_usage('/') 
     total_disk = disk.total / (1024 ** 3) 
@@ -55,9 +53,8 @@ def disk_usage():
     logging.info(f"Free hard drive space: {free_disk:.2f} GB") 
     logging.info(f"Hard drive usage: %{disk_usage_percent}")
     
-def system_temperature(): 
-    pass 
-
-cpu_usage() 
-memory_usage() 
-disk_usage() 
+if __name__ == "__main__": 
+    cpu_usage() 
+    memory_usage() 
+    disk_usage() 
+    system_temperature() 
