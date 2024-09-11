@@ -1,0 +1,12 @@
+2024-09-11 22:46:32,654: INFO: CPU total usage: %0.6
+2024-09-11 22:46:32,654: INFO: Number of logical threads: 4
+2024-09-11 22:46:32,654: INFO: Number of physical cores: 2
+2024-09-11 22:46:32,654: INFO: CPU usage by core: [0.4, 0.2, 1.6, 0.4]
+2024-09-11 22:46:32,655: INFO: Total memory: 7.61 GB
+2024-09-11 22:46:32,655: INFO: Available memory usage: 4.61 GB 
+2024-09-11 22:46:32,655: INFO: Used memory 2.41 GB
+2024-09-11 22:46:32,655: INFO: Memory usage percent: %39.5
+2024-09-11 22:46:32,655: INFO: Total hard drive space: 114.89 GB
+2024-09-11 22:46:32,655: INFO: Hard drive space used: 79.58 GB
+2024-09-11 22:46:32,655: INFO: Free hard drive space: 29.43 GB
+2024-09-11 22:46:32,655: INFO: Hard drive usage: %73.0

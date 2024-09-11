@@ -42,4 +42,3 @@ if __name__ == "__main__":
     cpu_usage() 
     memory_usage() 
     disk_usage() 
-    system_temperature() 
